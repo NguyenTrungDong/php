@@ -1,0 +1,7 @@
+[2025-05-24 11:25:20] Lỗi Giỏ Hàng: Tên khách hàng là bắt buộc
+[2025-05-24 11:25:31] Lỗi Giỏ Hàng: Tên khách hàng là bắt buộc
+[2025-05-24 11:27:25] Lỗi Giỏ Hàng: Tên khách hàng là bắt buộc
+[2025-05-24 11:27:35] Lỗi Giỏ Hàng: Định dạng email không hợp lệ
+[2025-05-24 11:27:50] Lỗi Giỏ Hàng: Số điện thoại không hợp lệ (phải có 10-11 chữ số)
+[2025-05-24 11:28:45] Lỗi Giỏ Hàng: Số điện thoại là bắt buộc
+[2025-05-24 11:29:34] Lỗi Giỏ Hàng: Số điện thoại là bắt buộc
