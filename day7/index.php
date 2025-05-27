@@ -4,9 +4,9 @@ require_once 'AffiliateManager.php';
 $manager = new AffiliateManager(); 
 
 // Tạo và thêm 3 cộng tác viên
-$partner1 = new AffiliatePartner("Nguyen Van A", "a@gmail.com", 5.0);
-$partner2 = new AffiliatePartner("Tran Thi B", "b@gmail.com", 7.5);
-$partner3 = new PremiumAffiliatePartner("Le Van C", "c@gmail.com", 10.0, 50000); // Sửa dữ liệu
+$partner1 = new AffiliatePartner("Nguyễn Văn A", "a@gmail.com", 5.0);
+$partner2 = new AffiliatePartner("Trần Thị B", "b@gmail.com", 7.5);
+$partner3 = new PremiumAffiliatePartner("Lê Văn C", "c@gmail.com", 10.0, 50000); // Sửa dữ liệu
 
 $addOutput = 
 [
@@ -61,7 +61,7 @@ list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValu
         <!-- Hiển thị danh sách cộng tác viên -->
         <div class="card mb-4">
             <div class="card-header">
-                <h2>List of Affiliates</h2>
+                <h2>Danh Sách Cộng Tác Viên Affiliate</h2>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -82,10 +82,10 @@ list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValu
         <!-- Hiển thị tính toán hoa hồng -->
         <div class="card">
             <div class="card-header">
-                <h2>Commission Calculation for Order Value: <?php echo number_format($orderValue); ?> VNĐ</h2>
+                <h2>Tính Toán Hoa Hồng Cho Đơn Hàng có giá trị <?php echo number_format($orderValue); ?> VNĐ</h2>
             </div>
             <div class="card-body">
-                <pre ><?php echo htmlspecialchars($commissionOutput ?? ""); ?></pre>
+                <pre class="text-white bg-dark"><?php echo htmlspecialchars($commissionOutput ?? ""); ?></pre>
             </div>
         </div>
     </div>

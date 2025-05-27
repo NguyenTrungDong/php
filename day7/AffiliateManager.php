@@ -24,9 +24,9 @@ class AffiliateManager
         $output = "Danh sách Các CTV Affiliate:\n" . str_repeat("=", 50) . "\n";
         foreach($this->partners as $index => $partner)
         {
-            $output = "Partner" . ($index + 1) . ":\n"; // Tên
-            $output = $partner->getSummary();   // Thông tin chi tiết
-            $output = str_repeat("-", 30) . "\n"; // vẽ chuỗi 
+            $output .= "Partner" . ($index + 1) . ":\n"; // Tên
+            $output .= $partner->getSummary();   // Thông tin chi tiết
+            $output .= str_repeat("-", 30) . "\n"; // vẽ chuỗi 
         }
         return $output;
     }
@@ -34,23 +34,25 @@ class AffiliateManager
     public function totalCommission($orderValue)
     {
         $total = 0; // Giá trị khởi đầu = 0
+        $output = "";
         foreach ($this->partners as $partner) // In ra từng thông tin của các QTV
         {
             if ($partner->isActive()) // Kiểm tra trạng thái
             {
                 $commission = $partner->calculateCommission($orderValue); // Tiền hoa hồn được nhận
                 $total += $commission;   
-                return sprintf( // In ra số tiền hoa hông được nhận
-                    "Commission for %s: %d VNĐ\n",
-                    $partner->getSummary()['name'] ?? "Unknow",
+                $output .= sprintf( // In ra số tiền hoa hông được nhận
+                    "Hoa hồng cho %s: %d VNĐ\n",
+                    $partner->getName() ?? "Unknow",
                     $commission
                 );
             }
         }
-        return $total;
+        $output .= sprintf("Tổng hoa hồng cho tất cả cộng tác viên là: %d VNĐ\n", $total);
+        return [$total, $output];
     }
 
-    public function getPartners() 
+    public function getPartners() // lấy danh sách các ctv
     {
         return $this->partners;
     }

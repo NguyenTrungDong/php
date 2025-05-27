@@ -17,7 +17,7 @@ class AffiliatePartner
         $this->isActive = $isActive;
     }
     
-    public function __destruct()
+    public function __destruct() // Mỗi lần in ra thông tin của ctv
     {
         
         echo "<script>console.log('Giải phóng bộ nhớ')</script>"; // Hiển thị khi đối tượng kết thúc phạm vi, chạy xong 
@@ -26,15 +26,15 @@ class AffiliatePartner
 
     public function calculateCommission($orderValue)
     {
-       if(!$this->isActive == true) // Kiểm tra trạng thái QTV
+       if(!$this->isActive) // Kiểm tra trạng thái ctv
        {
         return 0;  // Nếu như không hoạt động sẽ không có hoa hồng
        }else{  
-        return $orderValue * $this->commissionRate; // Trả về tiền hoa hồng được nhận
+        return $orderValue * ($this->commissionRate /100); // Trả về tiền hoa hồng được nhận
        }
     }
 
-    public function getSummary() // Trả về mảng thông tin của Partner
+    public function getSummary() // Trả về thông tin của Partner
     {   
         $status = $this->isActive ? 'Active' : 'Inactive'; // Kiểm tra trạng thái
         //Sprintf(string format, mixed ...values): string dùng để định dạng chuỗi văn bản theo 1 khuôn mẫu

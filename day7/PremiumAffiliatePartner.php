@@ -14,7 +14,7 @@ public function __construct($name, $email, $commissionRate, $bonusPerOrder, $isA
 
 public function calculateCommission($orderValue)//Ghi đè để cộng thêm tiền thưởng
 {
-    if(!$this->isActive = true)
+    if(!$this->isActive)
     {
         return 0; // Không tính hoa hồng với partner không còn hoạt động
     }
