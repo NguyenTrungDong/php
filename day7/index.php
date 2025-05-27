@@ -25,7 +25,7 @@ list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValu
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ Thống Quản Lý Tiếp Thị Liên Kết</title>
+    <title>Hệ Thống Quản Lý CTV Tiếp Thị Liên Kết</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -43,7 +43,7 @@ list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValu
 </head>
 <body>
     <div class="container my-5">
-        <h1 class="text-center mb-4">Hệ Thống Quản Lý Tiếp Thị Liên Kết</h1>
+        <h1 class="text-center mb-4">Hệ Thống Quản Lý CTV Tiếp Thị Liên Kết</h1>
 
         <!-- Hiển thị thông báo thêm cộng tác viên -->
         <div class="card mb-4">
