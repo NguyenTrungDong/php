@@ -15,9 +15,8 @@ $addOutput =
     $manager->addPartner($partner3)
 ];
 
-$listOutput = $manager->listPartners();
 $orderValue = 2000000; // Giá trị đơn hàng
-list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValue);
+list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValue); // Tính tổng hoa hồng theo giá trị đơn hàng
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +47,7 @@ list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValu
         <!-- Hiển thị thông báo thêm cộng tác viên -->
         <div class="card mb-4">
             <div class="card-header">
-                <h2>Thông Tin Quản Trị Viên</h2>
+                <h2>Danh Sách Các Cộng Tác Viên Affiliate Mới</h2>
             </div>
             <div class="card-body">
                 <?php foreach ($addOutput as $outPut)
@@ -90,7 +89,7 @@ list($totalCommission, $commissionOutput) = $manager->totalCommission($orderValu
         </div>
     </div>
 
-    <!-- Bootstrap 5 JS -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
