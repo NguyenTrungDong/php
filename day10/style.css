@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container {
+    display: grid;
+    gap: 20px;
+}
+section {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.product {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.product:hover {
+    background: #f9f9f9;
+}
+input, select, button {
+    margin: 5px;
+    padding: 8px;
+}
+#search-results, #product-details, #reviews, #brands, #poll-results {
+    margin-top: 10px;
+}
